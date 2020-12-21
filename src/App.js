@@ -10,6 +10,7 @@ function App() {
   const [status, setStatus] = useState();
   const [contract, setContract] = useState();
   const [credentials, setCredentials] = useState();
+  const [validators, setValidators] = useState();
 
   const buildDepositData = (pubkey, cred, amount, sign) => {
     const depositDatum = {
@@ -62,6 +63,7 @@ function App() {
         } else {
           console.log(decodedData.params);
           setCredentials(decodedData?.params[1].value);
+          setValidators(decodedData?.params[3].value.length);
           console.log("Sign ok");
           setStatus("success");
         }
@@ -83,13 +85,13 @@ function App() {
       </header>
       <section className="section">
         <div className="container">
-          <h1 className="title">Check your contract</h1>
+          <h1 className="title">Check your ETH 2.0 Deposit Message</h1>
           <div className="row">
             <div className="col-left">
               <div className="group">
                 <p className="lead">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                  labore et dolore magna aliqua.
+                  This tool check if transaction raw data contains a valid ETH 2.0 Deposit Message. Copy and
+                  paste your ETH1.x Deposit transaction raw data here
                 </p>
                 <form className="form" onSubmit={onSubmit}>
                   <div className="form-group">
@@ -112,7 +114,8 @@ function App() {
                       </div>
                       <div className="message-content">
                         <div className="message-title">Success!</div>
-                        <div className="message-text">{credentials}</div>
+                        <div className="message-text">Withdrawal credentials: {credentials}</div>
+                        <div className="message-text">Validator number: {validators}</div>
                       </div>
                     </div>
                   </div>
@@ -125,7 +128,10 @@ function App() {
                       </div>
                       <div className="message-content">
                         <div className="message-title">Error</div>
-                        <div className="message-text">Lorem ipsum dolor sit amet, consectetur.</div>
+                        <div className="message-text">
+                          Whoops! It looks like your transaction is not vaild for ETH 2 Mainnet. Do not
+                          broadcast the transaction and contact your staking provider.
+                        </div>
                       </div>
                     </div>
                   </div>
