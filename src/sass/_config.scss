@@ -1,0 +1,47 @@
+/**
+ * Colors
+ */
+$color-black: #000000;
+$color-dark: #00030e;
+$color-white: #ffffff;
+$color-gray: #7d8499;
+$color-gray-alt: #e1e3e8;
+$color-gray-light: #f7f7f7;
+$color-green: #82d318;
+$color-green-light: #8ed72f;
+
+/**
+ * Fonts
+ */
+$font-family-primary: "Montserrat", Helvetica, Arial, sans-serif;
+$font-family-secondary: "Space Grotesk", Helvetica, Arial, sans-serif;
+$font-family-monospace: "Source Code Pro", monospace;
+
+/**
+ * Font size
+ */
+$font-size-title: 72px;
+$font-size-body: 22px;
+$font-size-controls: 20px;
+$font-size-small: 17px;
+
+/**
+ * Font weight
+ */
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+/**
+ * Line height
+ */
+$line-height-title: 1.11;
+$line-height-body: 1.64;
+
+/**
+ * Other
+ */
+$transition: 0.2s ease;
+$media-mobile: 767px;
+$media-tablet: 991px;

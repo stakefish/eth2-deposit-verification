@@ -1,0 +1,28 @@
+body {
+  color: $color-gray;
+  font-size: $font-size-body;
+  background-color: $color-white;
+  line-height: $line-height-body;
+  font-family: $font-family-primary;
+
+  @media all and (max-width: $media-mobile) {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+}
+
+h1 {
+  font-family: $font-family-secondary;
+  font-size: $font-size-title;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-title;
+  color: $color-black;
+  margin-bottom: 34px;
+  letter-spacing: -0.036em;
+
+  @media all and (max-width: $media-mobile) {
+    font-size: 28px;
+    line-height: 36px;
+    margin-bottom: 15px;
+  }
+}
