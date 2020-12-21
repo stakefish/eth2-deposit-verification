@@ -76,7 +76,7 @@ function App() {
     <div className="App">
       <header className="header">
         <div className="container">
-          <a href="https://stake.fish/" target="_blank" tabIndex="-1" rel="noopener">
+          <a href="https://stake.fish/" tabIndex="-1" rel="noopener">
             <img className="logo" src="logo.svg" width="220px" alt="stake.fish" />
           </a>
         </div>
