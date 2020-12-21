@@ -2,6 +2,7 @@
   "name": "cerberus-2",
   "version": "0.1.0",
   "private": true,
+  "homepage": "stakefish.github.io/cerberus",
   "dependencies": {
     "@chainsafe/bls": "^4.0.0",
     "@chainsafe/ssz": "^0.6.13",
