@@ -6,10 +6,9 @@ This simple tool makes it easy to verify the withdrawal credentials, number of v
 
 ### Instructions
 
-1. Navigate to https://stakefish.github.io/cerberus/ or run the app locally.
+1. Navigate to https://stakefish.github.io/eth2-data-verification/ or run the app locally.
 2. During the deposit process, copy the hex data from MetaMask to the text area.
 3. Click "Check."
-
 
 ![Demo](https://miro.medium.com/max/700/0*WNnSrvxyiIgsTIcG)
 
