@@ -5,6 +5,7 @@ import abiDecoder from "abi-decoder";
 import { buildMessageRoot } from "./ssz";
 import { verifySignature } from "./verify-signature";
 import BatchDeposit from "./BatchDeposit.json";
+import SingleDeposit from "./SingleDeposit.json";
 
 function App() {
   const [status, setStatus] = useState();
@@ -33,11 +34,21 @@ function App() {
 
       abiDecoder.addABI(BatchDeposit);
 
-      const decodedData = abiDecoder.decodeMethod(contract);
+      let decodedData = abiDecoder.decodeMethod(contract);
 
       if (!decodedData?.params?.length) {
-        setStatus("error");
-        return;
+        abiDecoder.removeABI(BatchDeposit);
+        abiDecoder.addABI(SingleDeposit);
+
+        decodedData = abiDecoder.decodeMethod(contract);
+
+        if (!decodedData?.params?.length) {
+          setStatus("error");
+          return;
+        }
+
+        //Arrayify single deposit data root
+        decodedData.params[3].value = [decodedData.params[3].value];
       }
 
       // Get number of validators
